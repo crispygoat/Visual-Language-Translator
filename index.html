@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ancient Language Translator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script> <!-- Make sure D3.js is loaded here -->
+</head>
+<body>
+    <h1>Translate Text to Ancient Language</h1>
+
+    <form id="translatorForm">
+        <label for="inputText">Enter Text:</label>
+        <input type="text" id="inputText" required>
+        <input type="submit" value="Translate">
+        <button type="button" id="playSoundButton">Play Sound</button>
+    </form>
+
+    <div>
+        <label for="phiSlider">Adjust φ (Golden Ratio):</label>
+        <input type="range" id="phiSlider" min="1.5" max="2.0" step="0.01" value="1.618">
+        <span id="phiValue">1.618</span>
+    </div>
+
+    <h2>Translated Text:</h2>
+    <div id="translatedText"></div>
+
+    <h2>Visual Representation:</h2>
+    <canvas id="cipherGraph" width="600" height="400"></canvas>
+
+    <h2>Interactive Shape Representation:</h2>
+    <div id="shapeContainer"></div> <!-- D3.js Shape Container -->
+
+    <script src="translator.js"></script> <!-- Custom JS loaded after D3.js -->
+</body>
+</html>
